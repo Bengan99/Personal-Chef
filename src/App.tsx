@@ -8,9 +8,6 @@ import Navbar from "./components/Navbar";
 import SignupPage from "./pages/SignupPage";
 import "./App.css";
 
-//test testetst commit
-
-
 function App() {
   return (
     <BrowserRouter>
