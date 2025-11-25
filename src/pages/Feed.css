@@ -1,4 +1,18 @@
+/* Page-level defaults to avoid black background when content is long/short */
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #fafafa;
+  color: #222;
+}
+
 .feed-container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 12px;
@@ -6,8 +20,48 @@
 }
 
 .feed-item img {
+  display: block;
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
+  background: #eaeaea;
+  /* neutral background while image loads or if it fails */
+}
+
+/* card wrapper */
+.feed-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(114, 222, 5, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  cursor: pointer;
+}
+
+/* content area inside card */
+.feed-item .meta {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* hover effect */
+.feed-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+  .feed-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .feed-item img {
+    height: 140px;
+  }
 }

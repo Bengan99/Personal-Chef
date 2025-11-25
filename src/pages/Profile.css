@@ -12,8 +12,26 @@
 .profile-avatar {
   width: 120px;
   height: 120px;
-  border-radius: 100%;
+  border-radius: 50%;
   object-fit: cover;
+}
+
+/* Make each post a card */
+.profile-post-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.profile-post-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
 .profile-section-title {
