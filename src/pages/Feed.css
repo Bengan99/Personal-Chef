@@ -30,10 +30,15 @@ body {
 }
 
 /* card wrapper */
+/* card wrapper */
+.feed-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .feed-item {
-  background: #fff;
+  background: #eae8e4;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(114, 222, 5, 0.08);
+  box-shadow: 0 6px 18px rgba(9, 210, 210, 0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -45,12 +50,12 @@ body {
 .feed-item .meta {
   padding: 12px;
   font-size: 14px;
-  color: #333;
+  color: #a09696;
 }
 
 /* hover effect */
 .feed-item:hover {
-  transform: translateY(-6px);
+  transform: rotate(2deg) scale(1.3);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
